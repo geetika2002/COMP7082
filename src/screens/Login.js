@@ -5,7 +5,7 @@ export function Login() {
         <> 
         <h1>This is the login page!</h1>
         <Link to='/'>Main </Link>
-        <Link to='/login'>Login </Link>
+        <Link to='/dashboard'>Dashboard </Link>
         <Link to='/logout'>Logout </Link>
         </>
     )
