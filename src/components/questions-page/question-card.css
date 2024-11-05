@@ -1,8 +1,7 @@
 .question-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
+
     max-width: 500px;
     padding: 1rem;
     border: 1px solid #ccc;

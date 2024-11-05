@@ -5,7 +5,7 @@ import { Dashboard } from "./screens/dashboard";
 import { Main } from "./screens/Main";
 import { Login } from "./screens/Login";
 import { Logout } from "./screens/Logout";
-import { Questions } from "./screens/Questions";
+import { Questions } from "./screens/questions";
 
 function App() {
     return (

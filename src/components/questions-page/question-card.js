@@ -7,6 +7,11 @@ const QuestionCard = ({
     description = "Have you thought about what the elevator speech for yourself would be?",
     tags = ["behavioral", "easy"],
 }) => {
+
+    const questions = [
+        
+    ]
+
     return (
         <div className="question-card">
             <div className="question-card-header">
