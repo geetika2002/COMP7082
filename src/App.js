@@ -5,6 +5,8 @@ import { Dashboard } from './screens/dashboard';
 import { Main} from './screens/Main';
 import { Login} from './screens/Login';
 import { Logout } from './screens/Logout';
+import { Test } from './screens/test';
+import { Resource } from './screens/Resource';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/logout" element={<Logout/>}/>
         <Route path="/dashboard" element = {<Dashboard/>}></Route>
+        <Route path="/test" element = {<Test/>}></Route>
+        <Route path="/resource" element = {<Resource/>}></Route>
       </Routes>
     </Router>
   );
