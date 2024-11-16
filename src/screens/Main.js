@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Navbar from "../components/navbar"
+import Navbar from "../components/navbar.js"
 import userImage from "../assests/images/logo.png"
 
 export function Main() {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Sidebar from '../components/sidebar';
+import Sidebar from '../components/sidebar.js';
 import './dashboard.css';
 
 export function Dashboard() {

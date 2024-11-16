@@ -1,12 +1,12 @@
 import './App.css';
 
 import { HashRouter as Router, Routes, Route} from 'react-router-dom'
-import { Dashboard } from './screens/dashboard';
-import { Main} from './screens/Main';
-import { Login} from './screens/Login';
-import { Logout } from './screens/Logout';
-import { Test } from './screens/test';
-import { Resource } from './screens/Resource';
+import { Dashboard } from './screens/dashboard.js';
+import { Main} from './screens/Main.js';
+import { Login} from './screens/Login.js';
+import { Logout } from './screens/Logout.js';
+import { Test } from './screens/test.js';
+import { Resource } from './screens/Resource.js';
 
 
 function App() {
