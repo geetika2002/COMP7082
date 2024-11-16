@@ -11,7 +11,7 @@ function Navbar() {
             <Link to='/dashboard'> Help</Link>
             <div className="text">|</div>
             <Link to='/login'>Login </Link>
-            <Link to='/logout'>Signup </Link>
+            <Link to='/signup'>Signup </Link>
             </div>
         </div>
     )

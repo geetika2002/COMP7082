@@ -7,6 +7,7 @@ import { Login} from './screens/Login.js';
 import { Logout } from './screens/Logout.js';
 import { Test } from './screens/test.js';
 import { Resource } from './screens/Resource.js';
+import { Signup } from './screens/Signup.js';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/dashboard" element = {<Dashboard/>}></Route>
         <Route path="/test" element = {<Test/>}></Route>
         <Route path="/resource" element = {<Resource/>}></Route>
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
     </Router>
   );
