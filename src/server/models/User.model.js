@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import { required } from "nodemon/lib/config";
+// import { required } from "nodemon/lib/config";
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
     name: {type: String, required: true},
-    lastname:  {type: String, required: true},
+    lastname: {type: String, required: true},
     email:  {type: String, required: true},
     topics: {type: Array}, 
     skills: {type: Array},
