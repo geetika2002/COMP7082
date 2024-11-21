@@ -3,9 +3,10 @@ import Navbar from "../components/navbar"
 import userImage from "../assests/images/logo.png"
 
 export function Logout() {
+
+  
     return (
         <>
-          <Navbar />
           <div
             style={{
               backgroundColor: '#D6E2E8',
@@ -59,7 +60,7 @@ export function Logout() {
                 >
                   See you Soon!
                 </div>
-                <button
+                <Link to='/'
                   style={{
                     backgroundColor: '#003371',
                     width: '150px',
@@ -74,8 +75,8 @@ export function Logout() {
                     top: '40px'
                   }}
                 >
-                  Sign In
-                </button>
+                  Home page
+                </Link>
               </div>
             </div>
           </div>

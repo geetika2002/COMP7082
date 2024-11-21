@@ -74,7 +74,7 @@ export function Main() {
                   top: '40px'
                 }}
               >
-                Sign Up
+                <Link to="/create">Sign Up</Link>
               </button>
             </div>
           </div>

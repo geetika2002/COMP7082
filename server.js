@@ -1,9 +1,19 @@
 const express = require('express');
+const cors = require('cors');  // Import cors
 const mongoose = require('mongoose');
 require('dotenv').config(); // To load environment variables from .env file
-const userRoute = require('./routes/userRoutes.js'); // Importing the route file
+const userRoute = require('./src/server/routes/userRoutes.js'); // Importing the route file
 
 const app = express();
+
+// Allow CORS from your frontend's origin (localhost:3000)
+app.use(cors({
+  origin: 'http://localhost:3000',  // Allow only your frontend to access the backend
+  methods: ['GET', 'POST', 'PUT'],  // Allow specific methods including PUT
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Allow specific headers
+  credentials: true,  // Allow credentials (e.g., cookies, HTTP authentication)
+}));
+
 const port = 5000; // Server port
 
 // Get MongoDB URI from .env file

@@ -3,12 +3,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css'; // Create a CSS file for styling
 import userImage from '../assests/images/profile-user.png'; 
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Sidebar = () => {
+
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    // Get user name from localStorage
+    const firstName = localStorage.getItem('firstName');
+    const lastName = localStorage.getItem('lastName');
+
+    if (firstName && lastName) {
+        setUserName(`${firstName} ${lastName}`);
+    }
+}, []);
+
   return (
     <>
     <aside>
-  <p> Welcome, user </p>
+  <p> Welcome, {userName || 'User'} </p>
   <a href="javascript:void(0)">
     {/* <i class="fa fa-user-o" aria-hidden="true"></i> */}
     <Link to="/">Homepage</Link>
@@ -28,6 +43,10 @@ const Sidebar = () => {
   <a href="javascript:void(0)">
     <i class="fa fa-trash-o" aria-hidden="true"></i>
     <Link to="/logout">Logout</Link>
+  </a>
+  <a href="javascript:void(0)">
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+    <Link to="/edit">Edit Profile</Link>
   </a>
 </aside>
 

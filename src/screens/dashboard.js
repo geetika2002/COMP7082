@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import Sidebar from '../components/sidebar';
 import './dashboard.css';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export function Dashboard() {
+
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    // Get user name from localStorage
+    const firstName = localStorage.getItem('firstName');
+    const lastName = localStorage.getItem('lastName');
+
+    if (firstName && lastName) {
+        setUserName(`${firstName} ${lastName}`);
+    }
+}, []);
+
     return (
         <div className="dashboard-wrapper">
             <Sidebar />
