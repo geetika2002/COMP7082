@@ -48,15 +48,17 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-
+    console.log("received login request")
     try {
         const user = await User.findOne({ email });
         if (!user) {
+          console.log("user not found.")
             return res.status(401).json({ message: 'User not found' });
         }
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
+          console.log("password not valid.")
             return res.status(401).json({ message: 'Invalid password' });
         }
 
@@ -77,6 +79,7 @@ router.post('/login', async (req, res) => {
             token,
         });
     } catch (err) {
+      console.log("error found", err)
         res.status(500).json({ message: 'Server error' });
     }
 });
