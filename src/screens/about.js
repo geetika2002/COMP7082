@@ -7,6 +7,7 @@ export function About() {
         <>
         <Navbar></Navbar>
         <h1>This is the About us page</h1>
+        
         <Link to="/">Homepage</Link>
         </>
     )
