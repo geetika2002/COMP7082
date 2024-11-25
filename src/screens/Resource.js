@@ -7,7 +7,7 @@ import ResourceGrid from "../components/resourcegrid";
 export function Resource() {
     return (
         <>
-        <Navbar></Navbar>
+        <Navbar />
         <ResourceGrid />
         </>
     )

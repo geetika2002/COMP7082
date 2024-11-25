@@ -8,7 +8,7 @@ import teampic from "../assests/images/team-awesome-minions.jpg"
 export function About() {
     return (
         <>
-        <Navbar></Navbar>
+        <Navbar />
           <div className="about-container">
             <header className="about-header">
               <p className="about-subtitle">Our vision is to have a platform for jobseeker's to build confidence in their interviewing skills and secure the job they want.</p>
