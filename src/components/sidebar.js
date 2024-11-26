@@ -42,7 +42,7 @@ const Sidebar = () => {
   </a>
   <a href="javascript:void(0)">
     <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <Link to="/logout">Logout</Link>
+    <Link to="/">Logout</Link>
   </a>
   <a href="javascript:void(0)">
     <i class="fa fa-trash-o" aria-hidden="true"></i>

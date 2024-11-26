@@ -42,7 +42,7 @@ export function CreateUser() {
 
     try {
       // Make POST request using axios
-      const response = await axios.post('http://localhost:5000/users', payload);
+      const response = await axios.post('http://localhost:4000/users', payload);
 
       if (response.status === 201) {
         setSuccess('User created successfully!');

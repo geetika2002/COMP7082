@@ -13,7 +13,7 @@ const ForgotPasswordPage = () => {
     
         try {
             // Send request to backend to verify email
-            const response = await fetch('http://localhost:5000/users/forgot-password', {
+            const response = await fetch('http://localhost:4000/users/forgot-password', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }), // Only send the email
