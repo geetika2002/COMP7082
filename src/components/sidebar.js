@@ -1,7 +1,7 @@
 // src/components/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Sidebar.css'; // Create a CSS file for styling
+import '../styles/Sidebar.css'; // Create a CSS file for styling
 import userImage from '../assests/images/profile-user.png'; 
 import { useState } from 'react';
 import { useEffect } from 'react';

@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom"
-import Sidebar from '../components/sidebar';
+// import { Link } from "react-router-dom"
+// import Sidebar from '../components/sidebar';
 import Navbar from "../components/navbar"
+import "../styles/resources.css"
+import ResourceGrid from "../components/resourcegrid";
 
 export function Resource() {
     return (
-        <> 
-        <Navbar></Navbar>
-        <h1>This is the resources page!</h1>
-        <Link to='/logout'>Logout</Link>
+        <>
+        <Navbar />
+        <ResourceGrid />
         </>
     )
 }

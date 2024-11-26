@@ -1,0 +1,22 @@
+.faq-dropdown {
+    text-align: center;
+}
+.faq-item {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  .faq-question {
+    color: #0070AC;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .faq-answer {
+    padding: 10px;
+    border-left: 3px solid #0070AC;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
