@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import axios from 'axios';  // Import axios
+import userImage from "../assests/images/logo.png";
+import '../styles/createUser.css';
+
 
 export function CreateUser() {
   const [formData, setFormData] = useState({
@@ -57,89 +60,104 @@ export function CreateUser() {
 
   return (
     <div>
-      <Navbar />
-      <h1>Create User</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>{success}</p>}
+      <img src={userImage} alt="HireHero Logo" className="smalllogo" />
+      <div className="wholeform">
+      <h1>Welcome to HireHero</h1>
+      <h1 className="slogan">Suit Up for Sucess!</h1>
+      {error && <p className="error">{error}</p>}
+      {success && <p className="success">{success}</p>}
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name:</label>
+        <div className="form">
+          <label htmlFor="firstName"></label>
           <input
             type="text"
             id="firstName"
             name="firstName"
+            placeholder="First Name"
             value={formData.firstName}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="lastName"></label>
           <input
             type="text"
             id="lastName"
             name="lastName"
+            placeholder="Last Name"
             value={formData.lastName}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email"></label>
           <input
             type="email"
             id="email"
             name="email"
+            placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password"></label>
           <input
             type="password"
             id="password"
             name="password"
+            placeholder="Password"
             value={formData.password}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="topics">Topics (comma-separated):</label>
+          <label htmlFor="topics">Topics:</label>
+          <p className="description">Topics you would like to focus on. e.g Java, MongoDB, Soft Skills, etc.</p>
+          <p className="description2">Please separate using commas.</p>
           <input
             type="text"
             id="topics"
             name="topics"
+            placeholder='Java, MongoDB, Soft Skills, etc'
             value={formData.topics}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="skills">Skills (comma-separated):</label>
+          <label htmlFor="skills">Skills:</label>
+          <p className="description">Skills you would like to focus on. e.g Interpersonal Skill, Techincal Skills, etc.</p>
+          <p className="description2">Please separate using commas.</p>
           <input
             type="text"
             id="skills"
             name="skills"
+            placeholder='Interpersonal, Critical Thinking, etc'
             value={formData.skills}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="resume">Resume (URL):</label>
+          <label htmlFor="resume">Resume:</label>
+          <p className="description">Please link your resume in the field down below.</p>
           <input
             type="text"
             id="resume"
             name="resume"
+            placeholder='http://www.myresume'
             value={formData.resume}
             onChange={handleChange}
             required
           />
         </div>
-        <button type="submit">Create User</button>
+        <button type="submit">Sign Up</button>
       </form>
+    </div>
     </div>
   );
 }
