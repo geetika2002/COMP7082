@@ -4,10 +4,10 @@ import userImage from "../assests/images/logo.png";
 import '../styles/login.css'; // Importing a CSS file for styling
 
 export function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ export function Login() {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+            const data = await response.json();
 
       if (response.ok) {
         localStorage.setItem('token', data.token);
@@ -72,4 +72,5 @@ export function Login() {
     </div>
   );
   
+
 }

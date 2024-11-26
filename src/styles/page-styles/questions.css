@@ -1,0 +1,17 @@
+.main-layout {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    margin-top: 80px; /* Adjust this based on the height of your navbar */
+  }
+  
+  .categories-search {
+    width: 300px; /* Fixed width for category box */
+    margin-right: 20px; /* Space between category box and question cards */
+  }
+  
+  .question-cards {
+    flex: 1; /* Makes the question cards take up the remaining space */
+    max-width: 600px; /* Optional: set a maximum width for the cards */
+  }
