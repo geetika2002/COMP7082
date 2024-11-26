@@ -164,7 +164,7 @@ export function Flashcards() {
     return (
         <div style={{ marginTop: "50px" }}>
             <Navbar />
-            <div className="main-container">
+            <div className="grid-container">
                 <div className="flashcard-container">
                     {generateFlashcards()}
                 </div>
