@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
+import "../styles/editProfile.css"; // Import the CSS file
 
 export function EditProfile() {
     const [firstName, setFirstName] = useState("");
@@ -13,11 +14,10 @@ export function EditProfile() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Fetch user details (assuming you have an API endpoint for this)
         const fetchUserData = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const response = await fetch("http://localhost:5000/users/me", {
+                const response = await fetch("http://localhost:4000/users/me", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export function EditProfile() {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:5000/users/me", {
+            const response = await fetch("http://localhost:4000/users/me", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -66,12 +66,9 @@ export function EditProfile() {
             if (response.ok) {
                 setSuccess("Profile updated successfully.");
                 setError("");
-                // Optional: Update local storage with new user details
                 localStorage.setItem("firstName", firstName);
                 localStorage.setItem("lastName", lastName);
-
-                // Redirect to dashboard
-                navigate('/dashboard');  // Adjust this path based on your actual dashboard route
+                navigate('/dashboard');
             } else {
                 const data = await response.json();
                 setError(data.message || "Failed to update profile.");
@@ -86,126 +83,66 @@ export function EditProfile() {
     return (
         <>
             <Navbar />
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    minHeight: "100vh",
-                    backgroundColor: "#f9f9f9",
-                    padding: "20px",
-                }}
-            >
-                <div
-                    style={{
-                        backgroundColor: "white",
-                        padding: "30px",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                        width: "400px",
-                    }}
-                >
+            <div className="edit-profile-container">
+                <div className="edit-profile-card">
                     <h2>Edit Profile</h2>
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    {success && <p style={{ color: "green" }}>{success}</p>}
+                    {error && <p className="error-message">{error}</p>}
+                    {success && <p className="success-message">{success}</p>}
                     <form onSubmit={handleSubmit}>
-                        <div style={{ marginBottom: "15px" }}>
-                            <label htmlFor="firstName">First Name:</label>
+                        <div className="form-group">
+                            <label htmlFor="firstName"></label>
                             <input
                                 type="text"
                                 id="firstName"
+                                placeholder="First Name"
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                                 required
-                                style={{
-                                    width: "100%",
-                                    padding: "10px",
-                                    marginTop: "5px",
-                                    borderRadius: "5px",
-                                    border: "1px solid #ccc",
-                                }}
                             />
                         </div>
-                        <div style={{ marginBottom: "15px" }}>
-                            <label htmlFor="lastName">Last Name:</label>
+                        <div className="form-group">
+                            <label htmlFor="lastName"></label>
                             <input
                                 type="text"
                                 id="lastName"
+                                placeholder="Last Name"
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                                 required
-                                style={{
-                                    width: "100%",
-                                    padding: "10px",
-                                    marginTop: "5px",
-                                    borderRadius: "5px",
-                                    border: "1px solid #ccc",
-                                }}
                             />
                         </div>
-                        <div style={{ marginBottom: "15px" }}>
-                            <label htmlFor="email">Email:</label>
+                        <div className="form-group">
+                            <label htmlFor="email"></label>
                             <input
                                 type="email"
                                 id="email"
+                                placeholder="Email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                style={{
-                                    width: "100%",
-                                    padding: "10px",
-                                    marginTop: "5px",
-                                    borderRadius: "5px",
-                                    border: "1px solid #ccc",
-                                }}
                             />
                         </div>
-                        <div style={{ marginBottom: "15px" }}>
+                        <div className="form-group">
                             <label htmlFor="topics">Topics:</label>
                             <input
                                 type="text"
                                 id="topics"
                                 value={topics}
                                 onChange={(e) => setTopics(e.target.value)}
-                                placeholder="E.g., JavaScript, React"
-                                style={{
-                                    width: "100%",
-                                    padding: "10px",
-                                    marginTop: "5px",
-                                    borderRadius: "5px",
-                                    border: "1px solid #ccc",
-                                }}
+                                placeholder="E.g. JavaScript, React"
                             />
                         </div>
-                        <div style={{ marginBottom: "15px" }}>
+                        <div className="form-group">
                             <label htmlFor="skills">Skills:</label>
                             <input
                                 type="text"
                                 id="skills"
                                 value={skills}
                                 onChange={(e) => setSkills(e.target.value)}
-                                placeholder="E.g., Frontend, Backend"
-                                style={{
-                                    width: "100%",
-                                    padding: "10px",
-                                    marginTop: "5px",
-                                    borderRadius: "5px",
-                                    border: "1px solid #ccc",
-                                }}
+                                placeholder="E.g. Frontend, Backend"
                             />
                         </div>
-                        <button
-                            type="submit"
-                            style={{
-                                width: "100%",
-                                padding: "10px",
-                                backgroundColor: "#003371",
-                                color: "white",
-                                borderRadius: "5px",
-                                border: "none",
-                                cursor: "pointer",
-                            }}
-                        >
+                        <button type="submit" className="submit-button">
                             Save Changes
                         </button>
                     </form>

@@ -1,0 +1,104 @@
+/* CreateUser.css */
+
+body {
+  font-family: Avenier, sans-serif;
+}
+
+.smalllogo {
+    width: 200px; 
+    height: auto;
+    display: flex;
+    padding: 15px 20px; 
+}
+
+.wholeform {
+    background-color: #D6E2E8;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    margin-left: 30%; 
+}
+
+h1 {
+  text-align: center;
+  color: #003371;
+  margin-bottom: 20px;
+}
+
+.slogan {
+    font-size: 30px; 
+    margin-top: 30px; 
+}
+ 
+.form {
+    margin-top: 10%; 
+}
+
+label {
+  font-weight: bold;
+  color: #003371;
+  display: block;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #003371;
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.description {
+    font-size: 15px; 
+    color: #7d7d7d;
+}
+
+.description2 {
+    font-size: 15px; 
+    color: #7d7d7d;
+}
+
+button {
+  width: 70%;
+  padding: 12px;
+  background-color: #003371;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15%; 
+  margin-top: 5%;
+}
+
+button:hover {
+  background-color: #3c4260;
+}
+
+.error {
+  color: #e63946;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.success {
+  color: #2a9d8f;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px; 
+}

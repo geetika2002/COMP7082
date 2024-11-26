@@ -14,7 +14,7 @@ app.use(cors({
   credentials: true,  // Allow credentials (e.g., cookies, HTTP authentication)
 }));
 
-const port = 5000; // Server port
+const port = 4000; // Server port
 
 // Get MongoDB URI from .env file
 const mongoURI = process.env.MONGO_URI;
