@@ -21,20 +21,73 @@ const questions = [
     description: "Think about your career goals and aspirations.",
     tags: ["career", "hard"],
   },
+  {
+    id: 4,
+    title: "Explain the concept of a RESTful API.",
+    description: "Discuss the key principles and uses of RESTful APIs.",
+    tags: ["technical", "medium"],
+  },
+  {
+    id: 5,
+    title: "How do you manage conflicts in a team setting?",
+    description: "Think of examples where you successfully resolved team conflicts.",
+    tags: ["behavioral", "hard"],
+  },
+  {
+    id: 6,
+    title: "What are some challenges in scaling distributed systems?",
+    description: "Discuss key challenges and strategies for scaling systems.",
+    tags: ["technical", "hard"],
+  },
+  {
+    id: 7,
+    title: "What trends are shaping the software engineering industry?",
+    description: "Share insights into the latest trends and how they impact the industry.",
+    tags: ["industry", "medium"],
+  },
+  {
+    id: 8,
+    title: "How does Agile methodology improve software development?",
+    description: "Explain the principles of Agile and its impact on development processes.",
+    tags: ["industry", "easy"],
+  },
+  {
+    id: 9,
+    title: "What are key considerations for GDPR compliance?",
+    description: "Discuss how GDPR affects software design and data handling.",
+    tags: ["industry", "hard"],
+  },
 ];
 
-const QuestionList = () => {
+const QuestionList = ({ searchTerm, selectedCategory }) => {
+  const filteredQuestions = questions.filter((question) => {
+    const matchesCategory =
+      !selectedCategory || question.tags.includes(selectedCategory);
+    const matchesSearch =
+      !searchTerm ||
+      question.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      ) ||
+      question.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      question.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <div className="question-list">
-      {questions.map((question) => (
-        <QuestionCard
-          key={question.id}
-          id={question.id}
-          title={question.title}
-          description={question.description}
-          tags={question.tags}
-        />
-      ))}
+      {filteredQuestions.length > 0 ? (
+        filteredQuestions.map((question) => (
+          <QuestionCard
+            key={question.id}
+            id={question.id}
+            title={question.title}
+            description={question.description}
+            tags={question.tags}
+          />
+        ))
+      ) : (
+        <p>No questions found for the selected category.</p>
+      )}
     </div>
   );
 };
