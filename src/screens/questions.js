@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { TopNav } from "../components/common-components/top-nav";
+import Navbar from "../components/navbar"
 import "../styles/page-styles/questions.css";
-import QuestionCard from "../components/questions-page/question-card";
+import QuestionList from "../components/questions-page/questionslist";
 import CategoriesSearch from "../components/category-search/category-search";
 
 export function Questions() {
     return (
         <div>
-            <TopNav />
+            <Navbar />
             <div className="main-layout">
                 <CategoriesSearch/>
-                <QuestionCard />
-                <QuestionCard />
+                <QuestionList />
             </div>
         </div>
     );

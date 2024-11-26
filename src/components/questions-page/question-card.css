@@ -1,13 +1,12 @@
 .question-card {
     display: flex;
     flex-direction: column;
-
     max-width: 500px;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    padding: 16px;
+    border: 1px solid #e0e0ee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 
 .question-card-header {
@@ -28,12 +27,21 @@
     margin-bottom: 1rem;
 }
 
-.tag {
-    background-color: #f0f0f0;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-}
+.tag-questions {
+    list-style: none;
+    display: flex;
+    gap: 8px; /* Adds space between tags */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tag-question {
+    background-color: #f0f0f0; /* Optional styling */
+    padding: 4px 8px; /* Adds padding inside each tag */
+    border-radius: 4px; /* Makes the tags rounded */
+    font-size: 0.875rem; /* Adjust font size */
+  }
+  
 
 .question-card-footer {
     display: flex;

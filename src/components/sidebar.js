@@ -30,7 +30,7 @@ const Sidebar = () => {
   </a>
   <a href="javascript:void(0)">
     <i class="fa fa-laptop" aria-hidden="true"></i>
-    <Link to="/test">Interview Prep</Link>
+    <Link to="/questions">Interview Prep</Link>
   </a>
   <a href="javascript:void(0)">
     <i class="fa fa-clone" aria-hidden="true"></i>
