@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom"; // Import Link for navigation between routes
-import { useState } from "react"; // Import useState for state management
 import React from "react"; // Import React library
 import Navbar from "../components/navbar"; // Import Navbar component
-import CategoriesSearch from "../components/categorySearch"; // Import CategoriesSearch component (unused in this code)
 import "../styles/flashcards.css"; // Import CSS for styling
 import { Flashcard } from "../components/flashcard"; // Import Flashcard component
 

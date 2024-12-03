@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"  // Importing Link for routing
 import Navbar from "../components/navbar"  // Importing Navbar component
 import "../styles/about.css"  // Importing the CSS file for styling the about page
 import teampic from "../assests/images/team-awesome-minions.jpg"  // Importing the team image

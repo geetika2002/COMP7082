@@ -1,5 +1,4 @@
 import Navbar from "../components/navbar"; // Import the Navbar component
-import userImage from "../assests/images/logo.png"; // Import a logo or user image
 import { useState } from "react"; // Import React's useState hook
 import "../styles/faq.css"; // Import the CSS file for styling
 import faqData from "../assests/data/dataFaq"; // Import FAQ data

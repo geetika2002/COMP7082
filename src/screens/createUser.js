@@ -1,8 +1,6 @@
 // Import React's useState hook to manage form state and useNavigate for navigation between routes
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// Import Navbar component (not used in this file but likely part of the project)
-import Navbar from '../components/navbar';
 // Import axios for making HTTP requests
 import axios from 'axios';
 // Import user image for use in the form
