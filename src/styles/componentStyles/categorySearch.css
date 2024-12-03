@@ -1,0 +1,70 @@
+/* General container styling for the component */
+.categories-search {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #D6E2E8;
+  width: 30%;
+}
+
+/* Styling for the search bar container */
+.search-bar {
+  margin-bottom: 16px;
+}
+
+/* Styling for the search bar input field */
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Styling for the categories header */
+.categories h3 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #27487f;
+  text-align: center;
+}
+
+/* Styling for the list of category buttons */
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for individual category list items */
+.categories ul li {
+  margin-bottom: 8px;
+}
+
+/* Styling for the category buttons */
+.category-button {
+  background: none;
+  border: none;
+  color: #27487f;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Styling for the selected category button */
+.category-button.selected {
+  font-weight: bold;
+  text-decoration: none;
+  color: #27487f;
+  background-color: #91C1D8;
+}
+
+/* Hover effect for category buttons */
+.category-button:hover {
+  color: #27487f;
+  background-color: #91C1D8;
+}

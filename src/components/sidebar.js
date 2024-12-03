@@ -1,62 +1,55 @@
-// src/components/Sidebar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Sidebar.css'; // Create a CSS file for styling
-import userImage from '../assests/images/profile-user.png'; 
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link component from react-router-dom for routing
+import "../styles/componentStyles/sidebar.css"; // Import the CSS file for styling the sidebar
+import { useState } from "react"; // Import useState hook to manage state
+import { useEffect } from "react"; // Import useEffect hook to run side effects (e.g., fetching data)
 
 const Sidebar = () => {
+    const [userName, setUserName] = useState(""); // State to hold the user's name
 
-  const [userName, setUserName] = useState('');
+    useEffect(() => {
+        // Fetch the user's first name and last name from localStorage
+        const firstName = localStorage.getItem("firstName");
+        const lastName = localStorage.getItem("lastName");
 
-  useEffect(() => {
-    // Get user name from localStorage
-    const firstName = localStorage.getItem('firstName');
-    const lastName = localStorage.getItem('lastName');
+        // If both first and last names are found in localStorage, set the full name in state
+        if (firstName && lastName) {
+            setUserName(`${firstName} ${lastName}`);
+        }
+    }, []); // Empty dependency array means this runs once, when the component mounts
 
-    if (firstName && lastName) {
-        setUserName(`${firstName} ${lastName}`);
-    }
-}, []);
+    return (
+        <>
+            <aside> {/* Sidebar container */}
+                <p className="welcome"> Welcome! </p> {/* Welcome message */}
+                <p className="username">{userName || "User"}</p> {/* Display the user's name or "User" if not set */}
+                
+                {/* Sidebar links with navigation to different pages */}
+                <a href="javascript:void(0)">
+                    <Link to="/">Homepage</Link>
+                </a>
+                <a href="javascript:void(0)">
+                    <Link to="/questions">Interview Prep</Link>
+                </a>
+                <a href="javascript:void(0)">
+                    <Link to="/flashcards">Flashcards</Link>
+                </a>
+                <a href="javascript:void(0)">
+                    <Link to="/resource">Resources</Link>
+                </a>
+                <a href="javascript:void(0)">
+                    <Link to="/edit">Edit Profile</Link>
+                </a>
+            </aside>
 
-  return (
-    <>
-    <aside>
-  <p> Welcome, {userName || 'User'} </p>
-  <a href="javascript:void(0)">
-    {/* <i class="fa fa-user-o" aria-hidden="true"></i> */}
-    <Link to="/">Homepage</Link>
-  </a>
-  <a href="javascript:void(0)">
-    <i class="fa fa-laptop" aria-hidden="true"></i>
-    <Link to="/test">Interview Prep</Link>
-  </a>
-  <a href="javascript:void(0)">
-    <i class="fa fa-clone" aria-hidden="true"></i>
-    <Link to="/test">Chat</Link>
-  </a>
-  <a href="javascript:void(0)">
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-    <Link to="/resource">Resources</Link>
-  </a>
-  <a href="javascript:void(0)">
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <Link to="/">Logout</Link>
-  </a>
-  <a href="javascript:void(0)">
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    <Link to="/edit">Edit Profile</Link>
-  </a>
-</aside>
-
-<div class="social">
-  <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
-    <i class="fa fa-linkedin"></i>
-  </a>
-</div>
-</>
-  );
+            {/* Social media section with a LinkedIn link */}
+            <div className="social">
+                <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
+                    <i className="fa fa-linkedin"></i> {/* LinkedIn icon */}
+                </a>
+            </div>
+        </>
+    );
 };
 
-export default Sidebar;
+export default Sidebar; // Export the Sidebar component for use elsewhere

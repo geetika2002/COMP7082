@@ -1,110 +1,109 @@
 /* Main container styling */
 
 body {
-    background: url('../assests/images/background-image1.png') no-repeat center center fixed; /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire page */
-    background-attachment: fixed; /* Makes the background image fixed when scrolling */
-    height: 100vh; /* Ensures full viewport height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+  background: url('../assests/images/background-image1.png') no-repeat center center fixed; /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-attachment: fixed; /* Makes the background image fixed when scrolling */
+  height: 100vh; /* Ensures full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* Full screen height minus navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Full screen height minus navbar height */
+  padding: 20px;
+}
+
+/* Wrapper for content */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 35%;
+  height: 65%;
+  background-color: #91C1D8; /* Slightly lighter blue */
+  border-radius: 4px; /* Rounded corners */
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-right: 15%; 
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 15%; 
+}
+
+.logo {
+  max-width: 700px;
+  height: auto;
+}
+
+/* Text and Button Section */
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  padding-bottom: 10%;
+  line-height: 60px;
+  font-family: Avenier, sans-serif;
+}
+
+.sign-up-button {
+  background-color: #27487f; /* Match the navbar's blue color */
+  width: 200px; 
+  border: none;
+  border-radius: 30px;
+  padding: 15px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 100px;
+}
+
+.sign-up-button:hover {
+  background-color: #1b345b; /* Darker blue on hover */
+}
+
+.button-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Avenier, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
     padding: 20px;
   }
-  
-  /* Wrapper for content */
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 35%;
-    height: 65%;
-    background-color: #91C1D8; /* Slightly lighter blue */
-    border-radius: 4px; /* Rounded corners */
-    padding: 20px 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-right: 15%; 
-  }
-  
-  /* Logo Section */
+
   .logo-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-left: 15%; 
-  }
-  
-  .logo {
-    max-width: 700px;
-    height: auto;
-  }
-  
-  /* Text and Button Section */
-  .text-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
     margin-bottom: 20px;
-    padding-bottom: 10%;
-    line-height: 60px;
-    font-family: Avenier, sans-serif;
   }
-  
-  .sign-up-button {
-    background-color: #27487f; /* Match the navbar's blue color */
-    width: 200px; 
-    border: none;
-    border-radius: 30px;
-    padding: 15px 24px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 100px;
+
+  .text-section {
+    align-items: center;
   }
-  
-  .sign-up-button:hover {
-    background-color: #1b345b; /* Darker blue on hover */
+
+  .heading {
+    font-size: 2rem;
   }
-  
-  .button-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: Avenier, sans-serif;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .content-wrapper {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-  
-    .logo-section {
-      margin-bottom: 20px;
-    }
-  
-    .text-section {
-      align-items: center;
-    }
-  
-    .heading {
-      font-size: 2rem;
-    }
-  }
-  
+}

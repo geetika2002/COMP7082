@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate hook
-import "../styles/navbar.css";
+import { Link, useNavigate } from "react-router-dom";
+import "../styles/componentStyles/navbar.css";
 
 function Navbar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);

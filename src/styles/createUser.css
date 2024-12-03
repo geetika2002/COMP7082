@@ -1,40 +1,45 @@
-/* CreateUser.css */
-
+/* Apply general font styling for the entire document */
 body {
-  font-family: Avenier, sans-serif;
+  font-family: Avenir, sans-serif;
 }
 
+/* Style for the logo */
 .smalllogo {
-    width: 200px; 
-    height: auto;
-    display: flex;
-    padding: 15px 20px; 
+  width: 200px; 
+  height: auto;
+  display: flex;
+  padding: 15px 20px; 
 }
 
+/* Container styling for the entire form */
 .wholeform {
-    background-color: #D6E2E8;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    width: 600px;
-    margin-left: 30%; 
+  background-color: #D6E2E8;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  margin-left: 30%;
 }
 
+/* Style for headings */
 h1 {
   text-align: center;
   color: #003371;
   margin-bottom: 20px;
 }
 
+/* Style for the slogan */
 .slogan {
-    font-size: 30px; 
-    margin-top: 30px; 
-}
- 
-.form {
-    margin-top: 10%; 
+  font-size: 30px; 
+  margin-top: 30px; 
 }
 
+/* Style for the form container */
+.form {
+  margin-top: 10%;
+}
+
+/* Labels for inputs */
 label {
   font-weight: bold;
   color: #003371;
@@ -43,6 +48,7 @@ label {
   margin-top: 20px;
 }
 
+/* Styling for text, email, and password inputs */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -54,6 +60,7 @@ input[type="password"] {
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Focus state for inputs */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
@@ -61,16 +68,13 @@ input[type="password"]:focus {
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.description {
-    font-size: 15px; 
-    color: #7d7d7d;
+/* Description text */
+.description, .description2 {
+  font-size: 15px; 
+  color: #7d7d7d;
 }
 
-.description2 {
-    font-size: 15px; 
-    color: #7d7d7d;
-}
-
+/* Button styling */
 button {
   width: 70%;
   padding: 12px;
@@ -85,10 +89,12 @@ button {
   margin-top: 5%;
 }
 
+/* Hover effect for the button */
 button:hover {
   background-color: #3c4260;
 }
 
+/* Error message styling */
 .error {
   color: #e63946;
   text-align: center;
@@ -96,6 +102,7 @@ button:hover {
   font-size: 20px;
 }
 
+/* Success message styling */
 .success {
   color: #2a9d8f;
   text-align: center;
