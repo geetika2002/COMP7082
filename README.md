@@ -1,5 +1,6 @@
 COMP7082 - HireHero
 
+HireHero Makers
 Simran Gandhi: A01168364
 Geetika Varma: A01236366
 Bryan Campos Leguia: A01180134
