@@ -1,0 +1,40 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongo:
+        image: mongo:5.0
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Backend Tests
+        working-directory: ./server
+        env:
+          MONGO_URI: mongodb+srv://geetika2002:Nz3JZwc1PiPafPHC@hirehero.oh5tj.mongodb.net/test?retryWrites=true&w=majority&appName=HireHero
+          JWT_SECRET: super_secure_random_generated_key_12345!
+        run: npm test
+
+      - name: Build Frontend
+        run: |
+          npm install
+          npm run build
