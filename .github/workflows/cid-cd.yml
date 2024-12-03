@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Run Backend Tests
-        working-directory: ./server/test
+        working-directory: src/server/test
         env:
           MONGO_URI: mongodb+srv://geetika2002:Nz3JZwc1PiPafPHC@hirehero.oh5tj.mongodb.net/test?retryWrites=true&w=majority&appName=HireHero
           JWT_SECRET: super_secure_random_generated_key_12345!
