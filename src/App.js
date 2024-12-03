@@ -8,7 +8,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Dashboard } from "./screens/dashboard";
 import { Main } from "./screens/main";
 import { Login } from "./screens/login";
-import { Resource } from "./screens/resource";
+import { Resource } from "./screens/Resource";
 import { CreateUser } from "./screens/createUser";
 import { About } from "./screens/about";
 import { Faq } from "./screens/faq";
