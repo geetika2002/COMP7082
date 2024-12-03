@@ -1,4 +1,4 @@
-COMP7082 - HireHero
+# COMP7082 - HireHero
 
 HireHero Makers
 Simran Gandhi: A01168364
@@ -7,8 +7,21 @@ Bryan Campos Leguia: A01180134
 Connie Wu: A00993734
 Batchansaa Batzorig: A01252194
 
+=======
+Welcome to HireHero, the ultimate interview preparation app designed for everyone, from students to seasoned professionals! Whether you're landing your first job or aiming for a career change, HireHero equips you with the tools and confidence you need to succeed. With tailored mock interviews, expert advice, and personalized feedback, our app helps you master the art of interviewing.
 
-# Getting Started with Create React App
+Get ready for any interview type, with support for both technical and behavioral questions across a variety of industries. HireHero is here to make you feel fully prepared, whether you're practicing alone, with a friend, or seeking in-depth tips from industry veterans.
+
+No matter your age or experience level, HireHero is the one-stop solution to ace your interviews and take your career to the next level. "Suit up for success" with HireHero and step into your next interview with confidence!
+
+# Team Awesome (Group 6)
+* Simran Gandhi: A01168364
+* Geetika Varma: A01236366
+* Bryan Campos Leguia: A01180134
+* Connie Wu: A00993734
+* Batchansaa Batzorig: A01252194
+
+# Getting Started with HireHero
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -23,6 +36,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `node server.js`
+
+Runs the connection between the MongoDB and application. You won't have any access to the the frontend whilst running this command. 
+Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
+
+### `npm run dev `
+
+Runs the commands "npm start" and "node server.js" together, in conjunction. You can open both http://localhost:3000 and http://localhost:5000 to view both the database, and frontend. 
 
 ### `npm test`
 
@@ -48,33 +70,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
