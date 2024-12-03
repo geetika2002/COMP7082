@@ -22,34 +22,25 @@ const Sidebar = () => {
     return (
         <>
             <aside>
-                <p> Welcome, {userName || "User"} </p>
+                <p className="welcome"> Welcome! </p>
+                <p className="username">{userName || "User"} </p>
                 <a href="javascript:void(0)">
-                    {/* <i class="fa fa-user-o" aria-hidden="true"></i> */}
                     <Link to="/">Homepage</Link>
                 </a>
                 <a href="javascript:void(0)">
-                    <i class="fa fa-laptop" aria-hidden="true"></i>
                     <Link to="/questions">Interview Prep</Link>
                 </a>
                 <a href="javascript:void(0)">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
                     <Link to="/flashcards">Flashcards</Link>
                 </a>
                 <a href="javascript:void(0)">
-                    <i class="fa fa-clone" aria-hidden="true"></i>
-                    <Link to="/test">Chat</Link>
-                </a>
-                <a href="javascript:void(0)">
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
                     <Link to="/resource">Resources</Link>
                 </a>
                 <a href="javascript:void(0)">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    <Link to="/logout">Logout</Link>
+                    <Link to="/edit">Edit Profile</Link>
                 </a>
                 <a href="javascript:void(0)">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    <Link to="/edit">Edit Profile</Link>
+                    <Link to="/">Logout</Link>
                 </a>
             </aside>
 

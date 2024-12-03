@@ -9,7 +9,9 @@
   .categories-search {
     width: 300px; /* Fixed width for category box */
     margin-right: 20px; /* Space between category box and question cards */
+    background-color: white; 
   }
+
   
   .question-cards {
     flex: 1; /* Makes the question cards take up the remaining space */

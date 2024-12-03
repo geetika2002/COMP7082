@@ -3,8 +3,8 @@
   padding: 16px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  margin-bottom: 16px;
+  background-color: #D6E2E8;
+  width: 30%; 
 }
 
 /* Styling for the search bar */
@@ -22,10 +22,13 @@
 
 /* Styling for the categories header */
 .categories h3 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #27487f;
+  font-size: 30px;
+  text-align: center;
   /* Removed border-bottom to eliminate underline */
 }
 
@@ -47,7 +50,7 @@
   color: black;
   cursor: pointer;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   padding: 4px;
   border-radius: 4px;
 }
@@ -55,16 +58,20 @@
 .category-button.selected {
   font-weight: bold;
   text-decoration: none;
-  color: blue;
-  background-color: #e6f0ff; /* Light blue background for selected category */
+  color: #27487f;
+  background-color: #91C1D8; /* Light blue background for selected category */
 }
 
 .category-button:hover {
-  color: darkblue;
-  background-color: #f0f8ff; /* Slight hover effect */
+  color: #27487f;
+  background-color:#91C1D8; /* Slight hover effect */
 }
 
 /* Ensure buttons don't appear inline */
 .categories ul li {
   display: block;
+}
+
+.category-button {
+  color: #27487f;
 }

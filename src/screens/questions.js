@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
-import "../styles/page-styles/questions.css";
+import "../styles/questions.css";
 import QuestionList from "../components/questions-page/questionslist";
 import CategoriesSearch from "../components/category-search/category-search";
 

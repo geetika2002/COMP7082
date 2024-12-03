@@ -1,7 +1,7 @@
 .question-card {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 900px;
     padding: 16px;
     border: 1px solid #e0e0ee;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -12,15 +12,14 @@
 .question-card-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    align-items: left;
     width: 100%;
     margin-bottom: 1rem;
 }
 
 .top-right-button {
-    display: flex;
-    justify-content: flex-end;
+    width: 100px; 
+    height: 40px; 
 }
 
 .question-description {

@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from "react";
 import Navbar from "../components/navbar";
 import CategoriesSearch from "../components/category-search/category-search";
-import "../styles/page-styles/flashcards.css";
+import "../styles/flashcards.css";
 import { Flashcard } from "../components/flashcards-page/Flashcard";
 
 export function Flashcards() {
