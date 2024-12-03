@@ -25,16 +25,21 @@ jobs:
           node-version: 16
 
       - name: Install Dependencies
+        env:
+          CI: false
         run: npm install
 
       - name: Run Backend Tests
         working-directory: src/server/test
         env:
+          CI: false
           MONGO_URI: mongodb+srv://geetika2002:Nz3JZwc1PiPafPHC@hirehero.oh5tj.mongodb.net/test?retryWrites=true&w=majority&appName=HireHero
           JWT_SECRET: super_secure_random_generated_key_12345!
         run: npm test
 
       - name: Build Frontend
+        env:
+          CI: false
         run: |
           npm install
           npm run build
