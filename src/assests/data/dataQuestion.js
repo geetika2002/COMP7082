@@ -1,5 +1,4 @@
-// src/data/questionData.js
-
+// Array containing Interview Questions data
 export const questions = [
   {
     id: 1,

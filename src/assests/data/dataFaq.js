@@ -1,3 +1,4 @@
+// Array containing FAQ data
 const faqData = [
     {
       id: 1,

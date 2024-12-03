@@ -1,0 +1,89 @@
+/* Sidebar container styles */
+aside {
+  color: #fff;
+  width: 300px;
+  padding-left: 20px;
+  height: auto;
+  background-color: #27487f;
+  border-radius: 10px;
+}
+
+/* Styles for each link inside the sidebar */
+aside a {
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  padding: 15px;
+  margin-top: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Styles for links when hovered */
+aside a:hover {
+  color: #003371;
+  background: #fff;
+  outline: none;
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Styling the icon inside the link */
+aside a i {
+  margin-right: 5px;
+}
+
+/* Additional hover effect for links */
+aside a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 20px 0 0 #fff;
+}
+
+/* Another hover effect for links */
+aside a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+/* Welcome text style */
+.welcome { 
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Username text style */
+.username { 
+  margin-top: -20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+/* LinkedIn icon style */
+.social i:before { 
+  height: 14px;
+  font-size: 14px;
+  position: fixed;
+  color: #fff;
+  background: #003371;
+  padding: 10px;
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+}

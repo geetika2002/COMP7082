@@ -1,4 +1,4 @@
-    //Sample resources - 
+// Array containing Resources data
     const resources = [
         {
           id: 1,

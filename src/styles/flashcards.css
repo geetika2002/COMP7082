@@ -1,10 +1,12 @@
+/* Styles for the flashcard container with grid layout */
 .flashcard-container {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
+/* Styles for the grid container with maximum width and margin */
 .grid-container {
     max-width: 90vw;
     margin: 1rem 2rem;

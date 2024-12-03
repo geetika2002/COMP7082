@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import React from "react";
-import Navbar from "../components/navbar";
-import CategoriesSearch from "../components/category-search/category-search";
-import "../styles/flashcards.css";
-import { Flashcard } from "../components/flashcards-page/Flashcard";
+import { Link } from "react-router-dom"; // Import Link for navigation between routes
+import { useState } from "react"; // Import useState for state management
+import React from "react"; // Import React library
+import Navbar from "../components/navbar"; // Import Navbar component
+import CategoriesSearch from "../components/categorySearch"; // Import CategoriesSearch component (unused in this code)
+import "../styles/flashcards.css"; // Import CSS for styling
+import { Flashcard } from "../components/flashcard"; // Import Flashcard component
 
 export function Flashcards() {
-    // run this query to get all the questions
+    // Array of flashcard questions with details such as question, answer, and category
     const questions = [
         {
             id: 1,
@@ -45,15 +45,13 @@ export function Flashcards() {
         },
         {
             id: 6,
-            question:
-                "What is the difference between let, var, and const in JavaScript?",
+            question: "What is the difference between let, var, and const in JavaScript?",
             answer: "let and const are block-scoped and were introduced in ES6, while var is function-scoped. const is used for constants, let for variables that can be reassigned, and var is generally avoided in modern code.",
             category: "JavaScript",
         },
         {
             id: 7,
-            question:
-                "What are the four pillars of Object-Oriented Programming (OOP)?",
+            question: "What are the four pillars of Object-Oriented Programming (OOP)?",
             answer: "The four pillars are encapsulation, abstraction, inheritance, and polymorphism.",
             category: "Object-Oriented Programming",
             categoryShort: "OOP",
@@ -74,8 +72,7 @@ export function Flashcards() {
         },
         {
             id: 10,
-            question:
-                "What is the difference between synchronous and asynchronous programming?",
+            question: "What is the difference between synchronous and asynchronous programming?",
             answer: "Synchronous programming executes tasks sequentially, blocking the program until each task completes. Asynchronous programming allows tasks to run independently, enabling non-blocking execution.",
             category: "JavaScript",
         },
@@ -149,24 +146,25 @@ export function Flashcards() {
         },
     ];
 
+    // Function to generate Flashcard components for each question
     const generateFlashcards = () => {
         return questions.map((question) => (
             <Flashcard
-                key={question.id}
-                id={question.id}
-                question={question.question}
-                answer={question.answer}
-                category={question.category}
+                key={question.id} // Unique key for each flashcard
+                id={question.id} // Pass question ID as a prop
+                question={question.question} // Pass question text as a prop
+                answer={question.answer} // Pass answer text as a prop
+                category={question.category} // Pass category as a prop
             />
         ));
     };
 
     return (
-        <div style={{ marginTop: "50px" }}>
-            <Navbar />
-            <div className="grid-container">
-                <div className="flashcard-container">
-                    {generateFlashcards()}
+        <div style={{ marginTop: "50px" }}> {/* Wrapper div with top margin */}
+            <Navbar /> {/* Render the Navbar component */}
+            <div className="grid-container"> {/* Main grid container for layout */}
+                <div className="flashcard-container"> {/* Sub-container for flashcards */}
+                    {generateFlashcards()} {/* Render the generated Flashcards */}
                 </div>
             </div>
         </div>

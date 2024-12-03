@@ -1,3 +1,4 @@
+/* Container for the question card */
 .question-card {
     display: flex;
     flex-direction: column;
@@ -9,6 +10,7 @@
     background-color: #ffffff;
 }
 
+/* Header section of the card containing title and save button */
 .question-card-header {
     display: flex;
     flex-direction: row;
@@ -17,31 +19,35 @@
     margin-bottom: 1rem;
 }
 
+/* Styling for the save button positioned at the top-right corner */
 .top-right-button {
-    width: 100px; 
-    height: 40px; 
+    width: 100px;
+    height: 40px;
 }
 
+/* Styling for the description text of the question */
 .question-description {
     margin-bottom: 1rem;
 }
 
+/* List of tags associated with the question */
 .tag-questions {
     list-style: none;
     display: flex;
-    gap: 8px; /* Adds space between tags */
+    gap: 8px;
     padding: 0;
     margin: 0;
-  }
-  
-  .tag-question {
-    background-color: #f0f0f0; /* Optional styling */
-    padding: 4px 8px; /* Adds padding inside each tag */
-    border-radius: 4px; /* Makes the tags rounded */
-    font-size: 0.875rem; /* Adjust font size */
-  }
-  
+}
 
+/* Styling for individual tags */
+.tag-question {
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* Footer section containing the tag list and start button */
 .question-card-footer {
     display: flex;
     flex-direction: row;

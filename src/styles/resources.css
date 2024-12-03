@@ -1,8 +1,10 @@
+/* Reset margin and set font family for the body */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Grid layout for the resource container */
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -10,30 +12,35 @@ body {
   padding: 20px;
 }
 
+/* Styling for each individual resource item */
 .resource {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Hover effect for resource items */
 .resource:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the resource image */
 .resource-image {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
 
+/* Content area inside each resource item */
 .resource-content {
   padding: 15px;
 }
 
+/* Styling for the resource topic label */
 .resource-topic {
   font-size: 0.85rem;
   color: #0070AC;
@@ -43,26 +50,30 @@ body {
   display: block;
 }
 
+/* Styling for the resource title */
 .resource-title {
   font-size: 1.25rem;
-  color: #333333;
-  margin: 0;
+  color: #333333; 
+  margin: 0; 
   margin-bottom: 10px;
 }
 
+/* Styling for the resource description */
 .resource-description {
   font-size: 0.95rem;
   color: #555555;
   margin-bottom: 15px;
 }
 
+/* Styling for the resource link */
 .resource-link {
   font-size: 0.9rem;
   color: #0070AC;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
+/* Hover effect for the resource link */
 .resource-link:hover {
   text-decoration: underline;
 }

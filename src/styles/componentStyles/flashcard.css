@@ -1,3 +1,4 @@
+/* Styling for the flashcard container */
 .card {
     display: flex;
     justify-content: center;
@@ -12,19 +13,23 @@
     transition: 150ms;
 }
 
+/* Styling for the flipped state of the card */
 .card.flip {
     --rotate-y: 180deg;
 }
 
+/* Styling for the hover effect of the card */
 .card:hover {
     --translateY: -5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the front face of the card */
 .card .front {
     left: 0;
 }
 
+/* Styling for the front and back faces of the card */
 .card .front,
 .card .back {
     position: absolute;
@@ -32,12 +37,14 @@
     padding: 1rem;
 }
 
+/* Styling for the back face of the card */
 .card .back {
     transform: rotateY(180deg);
 }
 
+/* Styling for the category badge on the card */
 .category {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
     padding: 0.5rem 0.5rem;
     background-color: #D6E2E8;

@@ -1,4 +1,4 @@
-import resources from '../assests/sampledata/sampleResources'
+import resources from '../assests/data/dataResources'
 
 const ResourceGrid = () => {
     return (

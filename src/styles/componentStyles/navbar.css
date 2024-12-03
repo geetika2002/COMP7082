@@ -1,0 +1,71 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #27487f;
+  padding: 2.5rem 2.5rem;
+  color: white;
+  font-family: Avenier, sans-serif;
+}
+
+/* Left Side: Logo */
+.leftSide {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Right Side: Navigation Links */
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Links Styling */
+.rightSide a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Add hover effect for links */
+.rightSide a:hover {
+  text-decoration: underline;
+}
+
+/* Divider Styling */
+.rightSide .text {
+  font-size: 1rem;
+  color: white;
+  margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+  }
+
+  .rightSide {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftSide {
+      font-size: 1.2rem;
+  }
+
+  .rightSide a {
+      font-size: 0.9rem;
+  }
+
+  .rightSide .text {
+      font-size: 0.9rem;
+  }
+}
