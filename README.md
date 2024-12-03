@@ -1,13 +1,4 @@
 # COMP7082 - HireHero
-
-HireHero Makers
-Simran Gandhi: A01168364
-Geetika Varma: A01236366
-Bryan Campos Leguia: A01180134
-Connie Wu: A00993734
-Batchansaa Batzorig: A01252194
-
-=======
 Welcome to HireHero, the ultimate interview preparation app designed for everyone, from students to seasoned professionals! Whether you're landing your first job or aiming for a career change, HireHero equips you with the tools and confidence you need to succeed. With tailored mock interviews, expert advice, and personalized feedback, our app helps you master the art of interviewing.
 
 Get ready for any interview type, with support for both technical and behavioral questions across a variety of industries. HireHero is here to make you feel fully prepared, whether you're practicing alone, with a friend, or seeking in-depth tips from industry veterans.
